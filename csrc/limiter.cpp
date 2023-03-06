@@ -7,11 +7,11 @@ int main()
 {
   Verilated::traceEverOn(true);
   VerilatedVcdC *m_trace = new VerilatedVcdC;
-  dut.trace(m_trace, 5);
+  dut.trace(m_trace, 2);
   m_trace->open("waveform.vcd");
-    dut.gain = 1;
-    dut.upper_bound = 100000000;
-    dut.lower_bound = -100000000;
+    dut.gain = 10;
+    // dut.upper_bound = 100000000;
+    // dut.lower_bound = -100000000;
     int32_t sign_data = 0;
     while(!(sign_data < 0 && sign_data >= -100000000))
     {
